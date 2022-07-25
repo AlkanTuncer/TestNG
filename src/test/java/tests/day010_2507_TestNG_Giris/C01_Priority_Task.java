@@ -15,6 +15,7 @@ public class C01_Priority_Task {
     // 1. amazon ana sayfasina
     // 2. https://github.com/ ana sayfaya
     // 3. facebook ana sayfaya gitsin
+    // 4. yahoo sayfasına gidilsin
     // ve sayfa title'larini yazdirsin
 
     WebDriver driver;
