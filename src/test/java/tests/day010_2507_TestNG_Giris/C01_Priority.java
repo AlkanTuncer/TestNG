@@ -2,7 +2,7 @@ package tests.day010_2507_TestNG_Giris;
 
 import org.testng.annotations.Test;
 
-public class C01_TestPriority {
+public class C01_Priority {
 
     @Test      // TestNG - Testleri alfabetik sıraya göre çalıştırdı.
     public void testAmazon(){

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01_TestPriority_Task {
+public class C01_Priority_Task {
 
     // 3 test methodu olusturun
     // 1. amazon ana sayfasina
