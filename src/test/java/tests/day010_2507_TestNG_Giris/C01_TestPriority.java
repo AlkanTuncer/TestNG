@@ -1,20 +1,20 @@
-package test.day010_2507_TestNG_Giris;
+package tests.day010_2507_TestNG_Giris;
 
 import org.testng.annotations.Test;
 
-public class C01_TestPriority1 {
+public class C01_TestPriority {
 
-    @Test (priority = 53)    // Testler verdiğimiz priority sırasına göre çalışır. (Öncelik az olanda)
+    @Test      // TestNG - Testleri alfabetik sıraya göre çalıştırdı.
     public void testAmazon(){
         System.out.println("Amazon Testi");
     }
 
-    @Test (priority = 17)
+    @Test
     public void testYoutube(){
         System.out.println("Youtube Testi");
     }
 
-    @Test (priority = 'A')   // A'nın ASCII değeri : 065
+    @Test
     public void testBestBuy(){
         System.out.println("BestBuy Testi");
     }
