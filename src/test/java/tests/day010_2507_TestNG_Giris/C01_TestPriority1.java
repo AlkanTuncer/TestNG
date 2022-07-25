@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class C01_TestPriority1 {
 
-    @Test (priority = 53)    // Testler verdiğimiz priority sırasına göre çalışır. (Öncelik az olanda) - değer verirsek ilk o çalışır hata almayız.
+    @Test (priority = 53)    // Testler verdiğimiz priority sırasına göre çalışır. (Öncelik az olanda) Eksi '-' değer verirsek ilk o çalışır hata almayız.
     public void testAmazon(){
         System.out.println("Amazon Testi");
     }
