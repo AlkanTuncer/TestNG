@@ -11,10 +11,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 
 public class C02_DropDown_Task2 {
 
-    // Amazon'a gidilsin, dropdown'daki 3.element secilip yazdırılsın.
+    // Amazon'a gidilsin, dropdown'daki 3.element secilip yazdırılsın. Sonra bütün dropdown elementlerini yazdırın.
 
     WebDriver driver;
 
@@ -36,7 +37,18 @@ public class C02_DropDown_Task2 {
         //select.selectByValue("search-alias=automotive-intl-ship");
 
         System.out.println("3.Element : "+select.getFirstSelectedOption().getText());
+    }
 
+    @Test
+    public void testAllDropDowns(){
+        driver.navigate().to("https://www.amazon.com/");
+        WebElement dropDown = driver.findElement(By.xpath("//select[@class=\"nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown\"]"));
+        Select select = new Select(dropDown);
+
+        List<WebElement> optionsList = select.getOptions();
+        for (int i = 0; i < optionsList.size(); i++) {
+            System.out.println((i+1)+".DropDown Seçeneği : "+optionsList.get(i).getText());
+        }
     }
 
     @AfterMethod
