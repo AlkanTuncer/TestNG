@@ -1,4 +1,4 @@
-package tests.day011_Assertions;
+package tests.day011_dependsOnMethods;
 
 public class C01_Review {
 

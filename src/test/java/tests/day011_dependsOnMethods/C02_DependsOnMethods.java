@@ -1,4 +1,4 @@
-package tests.day011_Assertions;
+package tests.day011_dependsOnMethods;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
