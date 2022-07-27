@@ -54,17 +54,17 @@ public class C02_SoftAssertion_Task {
         WebElement dropDown = driver.findElement(By.xpath("//select[@id=\"pc_currency\"]"));
         Select select = new Select(dropDown);
         select.selectByIndex(6);  //8.adım
-        String expected = "Eurozone (euro)";
+        String expected = "Eurozone (Euro)";
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(select.getFirstSelectedOption().getText(),expected);  //9.adım
-        softAssert.assertTrue(select.getFirstSelectedOption().isSelected());
+        softAssert.assertEquals(select.getFirstSelectedOption().getText(),expected,"Eurozone (euro) seçili değil.");  //9.adım
 
-        List<WebElement> options = select.getOptions();  //10.adım
-
+        select.selectByValue("CHF"); // 10.adım
+        String actualSwitzerland = select.getFirstSelectedOption().getText();
+        String expectedSwit = "Switzerland (franc)";
+        softAssert.assertEquals(actualSwitzerland,expectedSwit,"DropDown listesinde \"Switzerland (franc)\" bulunamamıştır.");
 
         softAssert.assertAll();
-
     }
 
     @AfterMethod
