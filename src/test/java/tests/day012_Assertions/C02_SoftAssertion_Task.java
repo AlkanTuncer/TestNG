@@ -64,8 +64,14 @@ public class C02_SoftAssertion_Task {
         String expectedSwit = "Switzerland (franc)";
         softAssert.assertEquals(actualSwitzerland,expectedSwit,"DropDown listesinde \"Switzerland (franc)\" bulunamamıştır.");
 
-        List<WebElement> dropDownList = select.getOptions(); //10.adım 2.yol
-        softAssert.assertTrue(dropDownList.stream().anyMatch(s->s.getText().equals("Switzerlan (franc)")),"DropDown listesinde \"Switzerland (franc)\" bulunamamıştır.");
+        //10.adım 2.yol
+        List<WebElement> dropDownList2 = select.getOptions();
+        String dropDownOptions = "";
+        for (WebElement each : dropDownList2){
+            dropDownOptions += each.getText()+",";  // DropDown listesindeki bütün secenek textlerini bir String'e attık.
+        }
+        System.out.println("DropDown Seçenekleri : "+dropDownOptions);
+        softAssert.assertTrue(dropDownOptions.contains("Switzerland (franc)"));
 
         softAssert.assertAll();
     }
