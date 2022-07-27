@@ -27,7 +27,5 @@ public class C01_SoftAssert {
             softAssert.assertTrue(c<a,"5.Test FAILED"); // FAILED
 
             softAssert.assertAll();
-
     }
-
 }
