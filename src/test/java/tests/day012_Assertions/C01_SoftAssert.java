@@ -26,6 +26,6 @@ public class C01_SoftAssert {
             softAssert.assertTrue(c>a,"4.Test FAILED"); // PASSED
             softAssert.assertTrue(c<a,"5.Test FAILED"); // FAILED
 
-            softAssert.assertAll();
+            softAssert.assertAll();  // SoftAssert objesi create edildiğinde assertAll() metotu her zaman en alta yazılır!
     }
 }
