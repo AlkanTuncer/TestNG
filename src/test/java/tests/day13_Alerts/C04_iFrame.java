@@ -49,7 +49,7 @@ public class C04_iFrame {
         iFrameTextBox.clear();
         iFrameTextBox.sendKeys("Hala Madrid!");
 
-        driver.switchTo().parentFrame();
+        driver.switchTo().parentFrame();  //iFrame'den çıkıp asıl siteye dönmemiz lazım ki sitenin elementini bulabilelim.
         WebElement elementalLink = driver.findElement(By.xpath("//a[text()='Elemental Selenium']"));
         softAssert.assertTrue(elementalLink.isDisplayed());
         System.out.println("Link Text : "+elementalLink.getText());
