@@ -1,4 +1,4 @@
-package tests.day13_AlertsHandle;
+package tests.day13_Alerts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

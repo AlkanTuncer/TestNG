@@ -1,4 +1,4 @@
-package tests.day13_AlertsHandle;
+package tests.day13_Alerts;
 
 public class C00_Review {
 
