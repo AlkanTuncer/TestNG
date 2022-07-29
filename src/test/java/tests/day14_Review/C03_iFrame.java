@@ -45,7 +45,7 @@ public class C03_iFrame {
         iFrameTextBox.sendKeys("Merhaba Dünya!");
 
         // - TextBox’in altinda bulunan “Elemental Selenium” linkini textinin gorunur  oldugunu dogrulayin ve konsolda yazdirin.
-        driver.switchTo().parentFrame();
+        driver.switchTo().defaultContent();
         WebElement elementalLink = driver.findElement(By.xpath("//a[text()='Elemental Selenium']"));
         softAssert.assertTrue(elementalLink.isDisplayed(),"“Elemental Selenium” linkinin texti görünmüyor.");
         System.out.println("Link Text : "+elementalLink.getText());
