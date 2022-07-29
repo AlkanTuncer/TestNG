@@ -35,6 +35,7 @@ public class C03_iFrame {
         // “An IFrame containing….” textinin erisilebilir oldugunu test edin ve konsolda  yazdirin.
         WebElement text = driver.findElement(By.tagName("h3"));
         softAssert.assertTrue(text.isEnabled(),"“An IFrame containing….” textine erişim sağlanamadı.");
+        System.out.println("Text : "+text.getText());
 
         //Text Box’a “Merhaba Dunya!” yazin.
         WebElement iFrame = driver.findElement(By.xpath("//iframe[@id=\"mce_0_ifr\"]"));
@@ -47,6 +48,7 @@ public class C03_iFrame {
         driver.switchTo().parentFrame();
         WebElement elementalLink = driver.findElement(By.xpath("//a[text()='Elemental Selenium']"));
         softAssert.assertTrue(elementalLink.isDisplayed(),"“Elemental Selenium” linkinin texti görünmüyor.");
+        System.out.println("Link Text : "+elementalLink.getText());
     }
 
     @AfterClass
