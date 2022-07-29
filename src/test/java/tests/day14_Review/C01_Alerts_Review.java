@@ -63,12 +63,11 @@ public class C01_Alerts_Review {
 
         WebElement result = driver.findElement(By.xpath("//p[@id=\"result\"]"));
         softAssert.assertTrue(result.getText().contains("Alkan"),"Result mesajında isminiz görüntülenmiyor.");
-
-        softAssert.assertAll();
     }
 
     @AfterClass
     public void tearDown(){
+        softAssert.assertAll();
         driver.close();
     }
 
