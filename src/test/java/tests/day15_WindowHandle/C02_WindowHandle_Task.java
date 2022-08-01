@@ -38,6 +38,7 @@ public class C02_WindowHandle_Task {
 
         WebElement text = driver.findElement(By.tagName("h3"));
         String anaSayfa = driver.getWindowHandle();
+        System.out.println("Ana Sayfa Handle : "+anaSayfa);
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(text.getText().equals("Opening a new window"),"'Opening a new window' - Text dogrulanamadı.");
@@ -45,6 +46,8 @@ public class C02_WindowHandle_Task {
 
         driver.findElement(By.linkText("Click Here")).click();
         String tab = driver.getWindowHandle();
+        driver.switchTo().window(tab);
+        System.out.println("New Window Handle : "+tab);
 
         softAssert.assertEquals(driver.getTitle(),"New Window","New Window - Title dogrulanamadı.");
         WebElement text2 = driver.findElement(By.tagName("h3"));
