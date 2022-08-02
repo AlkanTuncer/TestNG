@@ -3,8 +3,8 @@ package tests.day16_ActionsClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import utilities.TestBase;
 
 public class C01_MouseActions extends TestBase {
@@ -42,12 +42,8 @@ public class C01_MouseActions extends TestBase {
         //    Acilan sayfada “Your Lists” yazisi oldugunu test edelim
         WebElement yourList = driver.findElement(By.xpath("//div[@role=\"heading\"]"));
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(yourList.getText().contains("Your Lists"),"Your List yazısı yoktur.");
-
-        softAssert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");  // Genelde 'title' ile test etmek daha uygun.
-
-        softAssert.assertAll();
+        Assert.assertTrue(yourList.getText().contains("Your Lists"),"Your List yazısı yoktur.");
+        Assert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");  // Genelde 'title' ile test etmek daha uygun.
     }
 
 }
