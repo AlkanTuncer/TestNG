@@ -45,4 +45,23 @@ public class C01_MouseActions extends TestBase {
         Assert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");
     }
 
+    @Test
+    public void actions(){
+        driver.navigate().to("https://webdriveruniversity.com/Actions/index.html#");
+
+        WebElement clickAndHold = driver.findElement(By.xpath("//div[@id=\"click-box\"]"));
+        Actions actions = new Actions(driver);
+
+        String ilki = clickAndHold.getText();
+        System.out.println("İlk Hali : "+ilki);
+
+        actions.clickAndHold(clickAndHold).perform();
+        String hold = clickAndHold.getText();
+        System.out.println("Hold : "+hold);
+
+        actions.release().perform();
+        String release = clickAndHold.getText();
+        System.out.println("Release : "+release);
+    }
+
 }
