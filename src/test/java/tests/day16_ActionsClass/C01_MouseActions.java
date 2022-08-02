@@ -39,11 +39,8 @@ public class C01_MouseActions extends TestBase {
         WebElement createList = driver.findElement(By.xpath("//*[text()=\"Create a List\"]"));
         actions.click(createList).perform();
 
-        //    Acilan sayfada “Your Lists” yazisi oldugunu test edelim
-        WebElement yourList = driver.findElement(By.xpath("//div[@role=\"heading\"]"));
-
-        Assert.assertTrue(yourList.getText().contains("Your Lists"),"Your List yazısı yoktur.");
-        Assert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");  // Genelde 'title' ile test etmek daha uygun.
+        //    Acilan sayfada “Your List” yazisi oldugunu test edelim
+        Assert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");
     }
 
 }
