@@ -22,6 +22,8 @@ public class C01_MouseActions extends TestBase {
                     dragAndDrop (): Öğeyi bir noktadan diğerine sürükler ve bırakır
                     moveToElement (): Fare işaretçisini öğenin üzerine gider
                     contextClick (): Fare üzerinde sağ tıklama yapar
+
+            https://webdriveruniversity.com/Actions/index.html# -> mouse actionları için egzersiz
      */
 
     @Test
