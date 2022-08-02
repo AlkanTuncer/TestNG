@@ -44,6 +44,9 @@ public class C01_MouseActions extends TestBase {
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(yourList.getText().contains("Your Lists"),"Your List yazısı yoktur.");
+
+        softAssert.assertTrue(driver.getTitle().contains("Your List"),"Your List yazısı yoktur.");  // Genelde 'title' ile test etmek daha uygun.
+
         softAssert.assertAll();
     }
 
