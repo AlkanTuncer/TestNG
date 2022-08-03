@@ -1,5 +1,6 @@
 package tests.day17;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.nio.file.Files;
@@ -25,6 +26,12 @@ public class C03_FilesExist {
         System.out.println(filePath);
 
         System.out.println("Files.exists(Paths.get(filePath)) = " + Files.exists(Paths.get(filePath)));
+
+        // pom.xml dosyamızın pathi : C:\Users\alkan\IdeaProjects\TestNG\pom.xml
+        String pathPomXml = System.getProperty("user.dir")+"\\pom.xml";
+        System.out.println("pom.xml Path : "+pathPomXml);
+
+        Assert.assertTrue(Files.exists(Paths.get(pathPomXml)),"pom.xml dosyası mevcut değildir.");
 
     }
 }
