@@ -26,7 +26,7 @@ public class C05_FileUpload extends TestBase {
         uploadButton.click();
 
         WebElement fileUploadedText = driver.findElement(By.tagName("h3"));
-        Assert.assertTrue(fileUploadedText.isDisplayed(),"File Uploaded! texti görüntülenemedi.");
+        Assert.assertTrue(fileUploadedText.isDisplayed(),"Upload gerçekleşmedi.");
     }
 
 }
