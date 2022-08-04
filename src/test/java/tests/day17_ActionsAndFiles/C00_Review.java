@@ -1,4 +1,4 @@
-package tests.day17;
+package tests.day17_ActionsAndFiles;
 
 public class C00_Review {
 
