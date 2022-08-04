@@ -10,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
+import java.util.Locale;
+
 public class C02_Faker extends TestBase {   // Faker adı üstünde sahte isimler,numaralar,adresler gibi bir çok şeyler üretir.
 
     //   "https://facebook.com/"  Adresine gidin
@@ -63,6 +65,26 @@ public class C02_Faker extends TestBase {   // Faker adı üstünde sahte isimle
         Assert.assertTrue(male.isSelected(),"Male seçili değil.");
         Assert.assertFalse(female.isSelected(),"Female seçili.");
         Assert.assertFalse(custom.isSelected(),"Custom seçili.");
+    }
+
+    @Test
+    public void faker(){
+        Faker fakerSKT = new Faker();
+
+        String str = fakerSKT.internet().avatar();
+        System.out.println("str : "+str);
+
+        String name = fakerSKT.name().username().toLowerCase(Locale.ROOT);
+        System.out.println("Faker Name : "+name);
+
+        int number = fakerSKT.number().randomDigit();
+        System.out.println("Faker Number : "+number);
+
+        String phoneNumber = fakerSKT.phoneNumber().cellPhone();
+        System.out.println("Faker PhoneNumber : "+phoneNumber);
+
+        String address = fakerSKT.address().fullAddress();
+        System.out.println("Faker Address : "+address);
     }
 
 }
