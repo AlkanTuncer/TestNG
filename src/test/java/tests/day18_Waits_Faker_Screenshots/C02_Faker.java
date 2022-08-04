@@ -60,9 +60,9 @@ public class C02_Faker extends TestBase {   // Faker adı üstünde sahte isimle
 
         male.click();
 
-        Assert.assertTrue(male.isSelected());
-        Assert.assertFalse(female.isSelected());
-        Assert.assertFalse(custom.isSelected());
+        Assert.assertTrue(male.isSelected(),"Male seçili değil.");
+        Assert.assertFalse(female.isSelected(),"Female seçili.");
+        Assert.assertFalse(custom.isSelected(),"Custom seçili.");
     }
 
 }
