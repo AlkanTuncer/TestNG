@@ -69,7 +69,7 @@ public class C02_Faker extends TestBase {   // Faker adı üstünde sahte isimle
 
     @Test
     public void faker(){
-        Faker fakerSKT = new Faker();
+        Faker fakerSKT = new Faker();  // Faker faker=new Faker(new Locale("tr","TR")); seçilirse türkçe fake öneriler var.
 
         String str = fakerSKT.internet().avatar();
         System.out.println("str : "+str);
