@@ -1,4 +1,4 @@
-package tests.day19_;
+package tests.day19_Screenshots;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

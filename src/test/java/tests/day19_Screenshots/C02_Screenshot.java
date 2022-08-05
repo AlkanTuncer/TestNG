@@ -1,4 +1,4 @@
-package tests.day19_;
+package tests.day19_Screenshots;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
