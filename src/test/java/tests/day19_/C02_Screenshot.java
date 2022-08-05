@@ -35,7 +35,7 @@ public class C02_Screenshot extends TestBase {
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Real Madrid",Keys.ENTER);
 
-        // sonucun Real Madrid icerdigini test edin ve ilk urunun goruntusunu alin
+        // sonucun Real Madrid icerdigini test edin ve sayfanın goruntusunu alin
         File realMadrid = new File("C:\\Users\\alkan\\IdeaProjects\\TestNG\\tScreen\\realMadrid.png");
         File geciciResimMadrid = ts.getScreenshotAs(OutputType.FILE);
         try {
