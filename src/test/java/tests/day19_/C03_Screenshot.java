@@ -2,6 +2,7 @@ package tests.day19_;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
@@ -30,6 +31,7 @@ public class C03_Screenshot extends TestBase {
         searchBox.sendKeys("Nutella", Keys.ENTER);
 
         // sonucun Nutella icerdigini test edin ve ilk urunun goruntusunu alin
+        Assert.assertTrue(driver.getTitle().contains("Nutella"),"Sonuç 'Nutella' içermiyor.");
         WebElement nutellaIlkUrun = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div"));
 
         File ilkUrunResim = new File("C:\\Users\\alkan\\IdeaProjects\\TestNG\\tScreen\\nutellailkürün.png");
