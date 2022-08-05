@@ -11,8 +11,10 @@ import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public abstract class TestBase {
 
@@ -40,8 +42,8 @@ public abstract class TestBase {
 
     public void getScreenshot(){
         ts = (TakesScreenshot) driver;
-        double number = Math.random();  // Üst üste screenshot almasın diye dosya adını her seferinde random bir sayı üreterek yeniliyoruz.
-        File allPage = new File("TScreenshot\\screenshot"+number+".png");
+        String tarih=new SimpleDateFormat("yyMMddhhmmss").format(new Date());  // Üst üste screenshot almasın diye dosya adını her seferinde tarihle yeniliyoruz.
+        File allPage = new File("TScreenshot\\screenshot"+tarih+".png");
         File temporaryPage = ts.getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(temporaryPage,allPage);
