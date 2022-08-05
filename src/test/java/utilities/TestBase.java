@@ -23,6 +23,11 @@ public abstract class TestBase {
 
     @AfterClass
     public void tearDown(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
 }
