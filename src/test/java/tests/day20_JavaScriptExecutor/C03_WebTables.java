@@ -5,11 +5,11 @@ import utilities.TestBase;
 public class C03_WebTables extends TestBase {
 
     /*
-        <table>
+        <table>                                                 Soldaki HTML Tablosu
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
+                <th>First Name</th>                         First Name    Last Name      Age
+                <th>Last Name</th>                            Alkan         Tuncer       30
+                <th>Age</th>                                 Caglasu         Buke        25
             </tr>
             <tr>
                 <td>Alkan</td>
