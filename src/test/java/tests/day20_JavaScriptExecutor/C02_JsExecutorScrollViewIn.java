@@ -16,6 +16,7 @@ public class C02_JsExecutorScrollViewIn extends TestBase {
     // 3- 2 farkli test method’u olusturarak actions clasi ve Js Executor kullanarak
     // 4- çözümler sayfasinın acildigini test edin
 
+    // https://www.softwaretestingmaterial.com/javascriptexecutor-selenium-webdriver/   -> JSE Metotları
 
     @Test
     public void testActions(){
