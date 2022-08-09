@@ -1,5 +1,8 @@
 package tests.day20_JavaScriptExecutor;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 import utilities.TestBase;
 
 public class C04_WebTables extends TestBase {
@@ -12,5 +15,19 @@ public class C04_WebTables extends TestBase {
     //  b. Örnek: printData (3,5); => 3. satır, 5. Sütundaki veriyi yazdırmalıdır.
 
     // //table//tbody//tr[5]//td[4] -> şeklinde xpath.
+
+    @Test
+    public void printDataTest(){
+        driver.navigate().to("https://editor.datatables.net/");
+        printDate(2,3);
+        printDate(9,4);
+        printDate(6,2);
+    }
+
+    public void printDate(int row,int column){
+        String path = "//body//tr["+row+"]//td["+column+"]";
+        WebElement data = driver.findElement(By.xpath(path));
+        System.out.println("data.getText() = " + data.getText());
+    }
 
 }
