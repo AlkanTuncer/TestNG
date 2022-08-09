@@ -12,7 +12,6 @@ import java.io.IOException;
 public class C02_ReadExcel {
 
     // ulkeler'den 4.satırı yazdırın.
-
     @Test
     public void testUlkelerRow3() throws IOException {
         String path = "src/test/java/resources/ulkeler.xlsx";
@@ -26,5 +25,19 @@ public class C02_ReadExcel {
             System.out.print(row.getCell(i)+" ");
         }
     }
+
+    // ilk 20 ulkenin baskentlerinin turkce isimlerini yazdirin
+    @Test
+    public void testIlkYirmi() throws IOException{
+        String path = "src/test/java/resources/ulkeler.xlsx";
+        FileInputStream fis = new FileInputStream(path);
+        Workbook workbook = WorkbookFactory.create(fis);
+        Sheet sheet = workbook.getSheet("Sayfa1");
+
+        for (int i = 1; i < 21; i++) {
+            System.out.println(sheet.getRow(i).getCell(3));
+        }
+    }
+
 
 }
