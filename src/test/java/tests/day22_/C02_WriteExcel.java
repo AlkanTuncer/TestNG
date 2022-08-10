@@ -38,6 +38,10 @@ public class C02_WriteExcel {
 
             workbook.write(fos);
 
+            workbook.close();
+            fis.close();
+            fos.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
