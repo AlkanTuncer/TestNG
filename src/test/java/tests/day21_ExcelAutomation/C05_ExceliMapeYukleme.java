@@ -20,6 +20,9 @@ public class C05_ExceliMapeYukleme {
         // Map'de Nepal oldugunu test edin.
         Assert.assertTrue(mapUlkeler.containsKey("Nepal"),"Map'de 'Nepal' yoktur.");
 
+        //  Value leri key göre yazdıralım..
+        mapUlkeler.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .forEach(System.out::println);
     }
 
 }
