@@ -40,6 +40,8 @@ public class C01_ReadExcel {
             int satirSayisi = sheet.getLastRowNum();
             System.out.println("Satır sayısı : "+satirSayisi);  // -> İndex'i verir. (3 index/4 satır)
 
+            fis.close();
+            workbook.close();
 
         } catch (IOException e) {
             e.printStackTrace();
